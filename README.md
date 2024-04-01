@@ -64,10 +64,7 @@ IP
 | limit 10 ![image](https://github.com/deepakray184/TIFeedCollection/assets/22987796/37cb55a3-d229-4e32-97a2-9d7cc41b5f94)
 
 
-
-
-
-
+'''
 let MISPFeed1 = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/7.txt"] with (format="txt", ignoreFirstRecord=True);
 let MISPFeed2 = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/6.txt"] with (format="txt", ignoreFirstRecord=True);
 let MISPFeed3 = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/8.txt"] with (format="txt", ignoreFirstRecord=True);
@@ -153,3 +150,7 @@ CommonSecurityLog
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
 | summarize count() by SourceIP, DeviceAction
+'''
+
+
+
