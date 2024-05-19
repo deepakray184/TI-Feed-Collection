@@ -45,3 +45,4 @@ let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 
 ## Reference
 https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/MISP
+https://www.misp-project.org/feeds/ 
