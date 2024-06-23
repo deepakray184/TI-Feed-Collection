@@ -1,6 +1,6 @@
-# Threat Intel Feeds
+# OSINT Threat Intel Feeds
 
-This project is to collect Threat Intel feed links mentioned below. 
+This project involves collecting the Open Source Threat Intelligence feed links listed below. These links can be utilized in Microsoft Sentinel and correlated with the raw logs.
 
 | Link | Type |
 | --- | --- |
@@ -29,6 +29,11 @@ This project is to collect Threat Intel feed links mentioned below.
 | `https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains/output/domains/ACTIVE/list` | domain |
 | `https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains/output/domains/INACTIVE/list` | domain |
 | `https://github.com/tetzispa/domains-names/tree/main/domainesq` | domain |
+| `https://threatview.io/Downloads/IP-High-Confidence-Feed.txt` | IP |
+| `https://threatview.io/Downloads/High-Confidence-CobaltStrike-C2%20-Feeds.txt` | Cobaltstrike |
+| `https://threatview.io/Downloads/Experimental-IOC-Tweets.txt` | OSINT FEED |
+| `https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt` | Domain |
+| `TBD` | TBD |
 
 ## KQL Query Example
 
@@ -43,6 +48,7 @@ let MISPFeed = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 ```
 
-## Reference
-https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/MISP
-https://www.misp-project.org/feeds/ 
+## References
+[Bert-JanP Collections](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/MISP)
+
+[Misp Project](https://www.misp-project.org/feeds/) 
